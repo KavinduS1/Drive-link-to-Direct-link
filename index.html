@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Google Drive Direct Link Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <i data-feather="link"></i>
+                Drive Link Converter
+            </h1>
+            <p class="subtitle">Convert Google Drive links to direct download URLs</p>
+        </header>
+
+        <div class="features">
+            <div class="feature">
+                <i data-feather="shield" class="feature-icon"></i>
+                <div>
+                    <h3>Secure & Private</h3>
+                    <p>No data stored - conversion happens locally in your browser</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="driveLink" placeholder="https://drive.google.com/file/d/..." autocomplete="off">
+        </div>
+
+        <button onclick="convertLink()">
+            <i data-feather="refresh-cw"></i>
+            Convert Link
+        </button>
+
+        <div class="result" id="result">
+            <input type="text" id="directLink" readonly>
+            <button class="copy-btn" onclick="copyLink()">
+                <i data-feather="copy"></i>
+                Copy Link
+            </button>
+        </div>
+
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                    <h3>Paste Drive Link</h3>
+                    <p>Use standard Google Drive share link</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                    <h3>Convert</h3>
+                    <p>Click convert to generate direct link</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                    <h3>Copy & Use</h3>
+                    <p>Use the direct link in your applications</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Note:</strong> This tool only works with files that are set to "Anyone with the link can view".
+            We do not store or process any of your data - conversion happens entirely in your browser.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
